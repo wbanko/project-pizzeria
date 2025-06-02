@@ -150,7 +150,6 @@ const select = {
       const option = param.options[optionId];
       console.log(optionId, option);
 
-      const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
       // check if there is param with a name of paramId in formData and if it includes optionId
       if(formData[paramId] && formData[paramId].includes(optionId)) {
       // check if the option is not default
@@ -166,13 +165,14 @@ const select = {
     }
     }
     // images
-    const image = thisProduct.imageWrapper.querySelector('.'+ paramId + '-' + optionId);
+    const optionSelected = formData[paramId] && formData[paramId].includes(optionId);
+    const optionImage = thisProduct.imageWrapper.querySelector('.'+ paramId + '-' + optionId);
 
-      if (image) {
+      if (optionImage) {
         if (optionSelected) {
-          image.classList.add('active');
+          optionImage.classList.add(classNames.menuProduct.imageVisible);
         } else {
-          image.classList.remove('active');
+          optionImage.classList.remove(classNames.menuProduct.imageVisible);
         }
       }
   }
