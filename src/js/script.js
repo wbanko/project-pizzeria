@@ -6,7 +6,7 @@
 const select = {
   templateOf: {
     menuProduct: '#template-menu-product',
-    cartProduct: '#template-cart-product', // CODE ADDED
+    cartProduct: '#template-cart-product', 
   },
   containerOf: {
     menu: '#product-list',
@@ -27,12 +27,12 @@ const select = {
   },
   widgets: {
     amount: {
-      input: 'input.amount', // CODE CHANGED
+      input: 'input.amount', 
       linkDecrease: 'a[href="#less"]',
       linkIncrease: 'a[href="#more"]',
     },
   },
-  // CODE ADDED START
+  
   cart: {
     productList: '.cart__order-summary',
     toggleTrigger: '.cart__summary',
@@ -51,7 +51,7 @@ const select = {
     edit: '[href="#edit"]',
     remove: '[href="#remove"]',
   },
-  // CODE ADDED END
+ 
 };
 
 const classNames = {
@@ -59,11 +59,11 @@ const classNames = {
     wrapperActive: 'active',
     imageVisible: 'active',
   },
-  // CODE ADDED START
+  
   cart: {
     wrapperActive: 'active',
   },
-  // CODE ADDED END
+  
 };
 
 const settings = {
@@ -71,19 +71,19 @@ const settings = {
     defaultValue: 1,
     defaultMin: 1,
     defaultMax: 9,
-  }, // CODE CHANGED
-  // CODE ADDED START
+  }, 
+  
   cart: {
     defaultDeliveryFee: 20,
   },
-  // CODE ADDED END
+  
 };
 
 const templates = {
   menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
-  // CODE ADDED START
+  
   cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
-  // CODE ADDED END
+  
 };
   class Product{
     constructor(id, data){
